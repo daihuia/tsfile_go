@@ -14,7 +14,7 @@ matrix:
       install:
         - export GOPATH="$GOPATH:$TRAVIS_BUILD_DIR/tsfile-go"
         - go get -v github.com/golang/snappy
-      script: go test -v tsfile
+      script: go test -v tsfile/...
 
     - os: linux
       name: linux-tsfile-go
@@ -24,7 +24,7 @@ matrix:
       install:
         - export GOPATH="$GOPATH:$TRAVIS_BUILD_DIR/tsfile-go"
         - go get -v github.com/golang/snappy
-      script: go test -v tsfile
+      script: go test -v tsfile/...
 
 #    - os: windows
 #      name: windows-tsfile-go
@@ -34,7 +34,7 @@ matrix:
 #      install:
 #        - export GOPATH="$GOPATH:$TRAVIS_BUILD_DIR/tsfile-go"
 #        - go get -v github.com/golang/snappy
-#      script: go test -v tsfile
+#      script: go test -v tsfile/...
 
 cache:
   directories:
